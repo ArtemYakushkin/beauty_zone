@@ -1,0 +1,251 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/play-v19-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/play-v19-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v30-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/roboto-v30-latin-500.woff2') format('woff2');
+}
+
+/* -- Base -- */
+
+:root {
+    --color-primary-dark: #011C44;
+    --color-primary-light: #ffffff;
+    --color-brand: #2B7FFF;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--color-primary-dark);
+    background: #f39898;
+    /* background: var(--color-primary-light); */
+    margin: 0;
+    padding: 0;
+}
+
+.logo {}
+
+.section-title {
+    font-family: 'Play', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.section-title span {
+    color: var(--color-brand);
+}
+
+/* -- Reset -- */
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* -- Header -- */
+
+.header {}
+
+.header__nav {}
+
+.header__list {}
+
+.header__item {}
+
+.header__link {
+    font-size: 18px;
+    line-height: 1.16;
+}
+
+.header__link:hover {
+    color: var(--color-brand);
+    font-weight: 700;
+}
+
+.header__social-list {}
+
+.header__social-item {}
+
+.header__social-link {}
+
+/* -- Hero -- */
+
+.hero {}
+
+.hero__subtitle {
+    font-size: 18px;
+    line-height: 1.16;
+}
+
+.hero__title {
+    color: var(--color-brand);
+    font-family: 'Play', sans-serif;
+    font-size: 140px;
+    font-weight: 700;
+    line-height: 0.81;
+    text-transform: capitalize;
+}
+
+.hero__btn {
+    background: var(--color-brand);
+    color: var(--color-primary-light);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.16;
+}
+
+.hero__text {
+    color: #4A4A4A;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* -- About -- */
+
+.about {}
+
+.about__text {
+    font-size: 22px;
+    line-height: 1.72;
+}
+
+.about__text span {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+/* -- Advantages -- */
+
+.advantages {}
+
+.advantages__list {}
+
+.advantages__item {}
+
+.advantages__text {
+    color: #000000;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.33;
+}
+
+/* -- Procedures -- */
+
+.procedures {}
+
+.procedures__list {}
+
+.procedures__item {}
+
+.procedures__text {
+    color: var(--color-primary-light);
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.18;
+}
+
+/* -- Contacts -- */
+
+.contacts {}
+
+.contacts__text {
+    color: var(--color-primary-light);
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.18;
+}
+
+.contacts__text span {
+    color: var(--color-brand);
+}
+
+/* -- Footer -- */
+
+.footer {}
+
+.footer__nav {}
+
+.footer__nav-list {}
+
+.footer__nav-item {}
+
+.footer__nav-link {
+    color: var(--color-primary-light);
+    font-size: 16px;
+    line-height: 1.18;
+}
+
+.footer__address {
+    font-style: normal;
+}
+
+.footer__address-list {}
+
+.footer__address-item {}
+
+.footer__address-link {
+    color: var(--color-primary-light);
+    font-size: 16px;
+    line-height: 1.18;
+}
+
+.footer__social-link {}
+
+.footer__policy-copy-box {}
+
+.footer__policy {
+    color: var(--color-primary-light);
+    font-size: 16px;
+    line-height: 1.18;
+}
+
+.footer__copy {
+    color: #747272;
+    font-size: 13px;
+    line-height: 1.15;
+}

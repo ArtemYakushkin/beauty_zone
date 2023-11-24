@@ -32,23 +32,35 @@
 
 /* -- Base -- */
 
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
 :root {
     --color-primary-dark: #011C44;
     --color-primary-light: #ffffff;
     --color-brand: #2B7FFF;
+    --color-hero-text: #4A4A4A;
+    --color-advantages-text: #000000;
+    --color-copy-text: #747272;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: var(--color-primary-dark);
-    background: #f39898;
-    /* background: var(--color-primary-light); */
+    background: var(--color-primary-light);
     margin: 0;
     padding: 0;
 }
 
-.logo {}
+.container {
+    max-width: 1440px;
+    padding: 0 100px;
+    margin: 0 auto;
+}
 
 .section-title {
     font-family: 'Play', sans-serif;
@@ -86,15 +98,46 @@ a {
     color: inherit;
 }
 
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+
 /* -- Header -- */
 
-.header {}
+.header {
+    padding: 32px 0;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    margin-bottom: -101px;
+}
 
-.header__nav {}
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
 
-.header__list {}
+.header__nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 40px;
+}
 
-.header__item {}
+.header__list {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 56px;
+}
 
 .header__link {
     font-size: 18px;
@@ -103,31 +146,51 @@ a {
 
 .header__link:hover {
     color: var(--color-brand);
-    font-weight: 700;
 }
 
-.header__social-list {}
+.header__social-list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
 
-.header__social-item {}
+.header__social-link {
+    fill: var(--color-primary-dark);
+}
 
-.header__social-link {}
+.header__social-link:hover {
+    fill: var(--color-brand);
+}
 
 /* -- Hero -- */
 
-.hero {}
+.hero {
+    padding: 120px 0 126px 0;
+    background-image: url(../images/main-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero__wrapper {
+    padding-left: 106px;
+}
 
 .hero__subtitle {
     font-size: 18px;
     line-height: 1.16;
+    margin-bottom: 16px;
 }
 
 .hero__title {
+    max-width: 530px;
     color: var(--color-brand);
     font-family: 'Play', sans-serif;
     font-size: 140px;
     font-weight: 700;
     line-height: 0.81;
     text-transform: capitalize;
+    margin-bottom: 40px;
 }
 
 .hero__btn {
@@ -136,21 +199,53 @@ a {
     font-size: 18px;
     font-weight: 600;
     line-height: 1.16;
+    padding: 16px 32px;
+    border-radius: 32px;
+    border: 2px solid var(--color-brand);
+    cursor: pointer;
+    margin-bottom: 14px;
+}
+
+.hero__btn:hover {
+    color: var(--color-primary-dark);
+    background: transparent;
+    border: 2px solid var(--color-brand);
 }
 
 .hero__text {
-    color: #4A4A4A;
+    max-width: 238px;
+    text-align: center;
+    color: var(--color-hero-text);
     font-size: 12px;
     line-height: 1.5;
 }
 
 /* -- About -- */
 
-.about {}
+.about {
+    padding-bottom: 176px;
+}
+
+.about__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.about__left {
+    padding-top: 40px;
+}
+
+.about__title {
+    max-width: 530px;
+    margin-bottom: 40px;
+}
 
 .about__text {
+    max-width: 709px;
     font-size: 22px;
     line-height: 1.72;
+    margin-bottom: 40px;
 }
 
 .about__text span {
@@ -158,16 +253,58 @@ a {
     text-transform: capitalize;
 }
 
+.about__right {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about__img-top,
+.about__img-bottom {
+    width: 327px;
+    height: 327px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.about__img-bottom {
+    margin-left: auto;
+}
+
 /* -- Advantages -- */
 
-.advantages {}
+.advantages {
+    padding-bottom: 96px;
+}
 
-.advantages__list {}
+.advantages__title {
+    text-align: center;
+    margin-bottom: 48px;
+}
 
-.advantages__item {}
+.advantages__list {
+    padding: 0 90px;
+    display: flex;
+    gap: 56px;
+}
+
+.advantages__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 24px 32px;
+    border-radius: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(168, 198, 245, 0.38);
+}
+
+.advantages__icon {
+    fill: var(--color-brand);
+}
 
 .advantages__text {
-    color: #000000;
+    color: var(--color-advantages-text);
     text-align: center;
     font-size: 18px;
     line-height: 1.33;
@@ -175,11 +312,86 @@ a {
 
 /* -- Procedures -- */
 
-.procedures {}
+.procedures {
+    padding-bottom: 96px;
+}
 
-.procedures__list {}
+.procedures__title {
+    text-align: center;
+    margin-bottom: 48px;
+}
 
-.procedures__item {}
+.procedures__slider {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.procedures__btn-left,
+.procedures__btn-right {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--color-primary-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advantages__icon-left {
+    fill: var(--color-primary-dark);
+}
+
+.advantages__icon-right {
+    fill: var(--color-primary-dark);
+    transform: rotate(180deg);
+}
+
+.procedures__btn-left:hover,
+.procedures__btn-right:hover {
+    background: var(--color-brand);
+    border: 1px solid var(--color-brand);
+}
+
+.procedures__btn-left:hover .advantages__icon-left,
+.procedures__btn-right:hover .advantages__icon-right {
+    fill: var(--color-primary-light);
+}
+
+.procedures__list {
+    display: flex;
+    gap: 16px;
+}
+
+.procedures__item {
+    padding: 372px 77px 32px 115px;
+    flex-basis: calc((100% - 32px) / 3);
+    border-top-right-radius: 120px;
+    border-bottom-left-radius: 120px;
+    overflow: hidden;
+}
+
+.item-procedures-1 {
+    background-image: url(../images/gradient-procedure.png), url(../images/procedure-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.item-procedures-2 {
+    background-image: url(../images/gradient-procedure.png), url(../images/procedure-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.item-procedures-3 {
+    background-image: url(../images/gradient-procedure.png), url(../images/procedure-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 .procedures__text {
     color: var(--color-primary-light);
@@ -190,7 +402,35 @@ a {
 
 /* -- Contacts -- */
 
-.contacts {}
+.contacts {
+    padding-bottom: 96px;
+}
+
+.contacts__title {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.contacts__wrapper {
+    padding: 0 90px;
+    display: flex;
+    gap: 32px;
+}
+
+.contacts__map {
+    flex-shrink: 1;
+    border: none;
+    border-radius: 32px;
+}
+
+.contacts__form-group {
+    /* flex-shrink: 1; */
+    max-width: 423px;
+    background: var(--color-primary-dark);
+    background-image: url(../images/form-bg.png);
+    padding: 48px 56px;
+    border-radius: 32px;
+}
 
 .contacts__text {
     color: var(--color-primary-light);
@@ -245,7 +485,7 @@ a {
 }
 
 .footer__copy {
-    color: #747272;
+    color: var(--color-copy-text);
     font-size: 13px;
     line-height: 1.15;
 }

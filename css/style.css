@@ -48,10 +48,16 @@
 }
 
 body {
+    position: relative;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: var(--color-primary-dark);
     background: var(--color-primary-light);
+    background-image: url(../images/advantages-bg.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 55%;
+    background-size: 100%;
     margin: 0;
     padding: 0;
 }
@@ -424,7 +430,6 @@ img {
 }
 
 .contacts__form-group {
-    /* flex-shrink: 1; */
     max-width: 423px;
     background: var(--color-primary-dark);
     background-image: url(../images/form-bg.png);
@@ -446,13 +451,34 @@ img {
 
 /* -- Footer -- */
 
-.footer {}
+.footer {
+    position: relative;
+    padding: 56px 0;
+    background: var(--color-primary-dark);
+    background-image: url(../images/footer-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
-.footer__nav {}
+.footer__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 
-.footer__nav-list {}
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-.footer__nav-item {}
+.footer__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
 .footer__nav-link {
     color: var(--color-primary-light);
@@ -460,13 +486,25 @@ img {
     line-height: 1.18;
 }
 
+.footer__nav-link:hover {
+    color: var(--color-brand);
+}
+
 .footer__address {
     font-style: normal;
 }
 
-.footer__address-list {}
+.footer__address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
-.footer__address-item {}
+.footer__address-item-social {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
 
 .footer__address-link {
     color: var(--color-primary-light);
@@ -474,9 +512,23 @@ img {
     line-height: 1.18;
 }
 
-.footer__social-link {}
+.footer__address-link:hover {
+    color: var(--color-brand);
+}
 
-.footer__policy-copy-box {}
+.footer__icons {
+    fill: var(--color-primary-light);
+}
+
+.footer__icons:hover {
+    fill: var(--color-brand);
+}
+
+.footer__policy-copy-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
 .footer__policy {
     color: var(--color-primary-light);

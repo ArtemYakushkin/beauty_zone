@@ -62,7 +62,8 @@
     font-size: 64px;
     font-weight: 700;
     line-height: 1.15;
-    margin-bottom: 40px;
+    max-width: 435px;
+    margin: 0 auto 40px auto;
 }
 
 .modal__text {
@@ -80,4 +81,46 @@
 
 .modal__input {
     margin-bottom: 24px;
+}
+
+@media (max-width: $bp-tablet) {
+
+    .modal {
+        padding: 72px 42px;
+    }
+
+    .modal__title {
+        font-size: 44px;
+        max-width: 320px;
+    }
+
+    .modal__text {
+        font-size: 16px;
+    }
+    
+}
+
+@media (max-width: $bp-mobile) {
+
+    .modal {
+        padding: 42px 12px;
+        border-radius: 22px;
+        max-height: 600px;
+    }
+
+    .modal__btn-close {
+        top: 20px;
+        right: 20px;
+    }
+
+    .modal__title {
+        font-size: 44px;
+        max-width: 320px;
+        margin-bottom: 16px;
+    }
+
+    .modal__text {
+        font-size: 16px;
+    }
+
 }

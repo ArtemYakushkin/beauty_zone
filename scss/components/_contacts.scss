@@ -104,3 +104,55 @@
     text-decoration-line: underline;
     text-underline-offset: 2px;
 }
+
+@media (max-width: $bp-desktop) {
+
+    .contacts__wrapper {
+        padding: 0 40px;
+    }
+
+}
+
+@media (max-width: $bp-sub-tablet) {
+
+    .contacts__wrapper {
+        gap: 24px;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: $bp-tablet) {
+
+    .contacts {
+        padding-bottom: 0px;
+    }
+
+    .contacts__title {
+        margin-bottom: 24px;
+    }
+
+    .contacts__wrapper {
+        padding: 0;
+    }
+
+    .contacts__form-group {
+        padding: 42px 24px;
+        border-radius: 24px;
+    }
+
+    .contacts__form-btn {
+        font-size: 16px;
+        line-height: 1.18;
+        padding: 16px 24px;
+        border-radius: 24px;
+    }
+
+    .contacts__map {
+        // width: 100%;
+        height: 232px;
+        border-radius: 0;
+    }
+
+}

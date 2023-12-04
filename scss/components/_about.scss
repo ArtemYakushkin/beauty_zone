@@ -1,0 +1,162 @@
+.about {
+    padding-bottom: 88px;
+}
+
+.about__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.about__star-1 {
+    position: absolute;
+    top: 350px;
+    right: 300px;
+    animation-name: star;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.about__star-2 {
+    position: absolute;
+    top: 42px;
+    right: -16px;
+    animation-name: star;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.about__star-3 {
+    position: absolute;
+    top: 240px;
+    right: 10px;
+    animation-name: star;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.about__star-4 {
+    display: none;
+}
+
+.about__left {
+    padding-top: 40px;
+}
+
+.about__title {
+    max-width: 530px;
+    margin-bottom: 40px;
+}
+
+.about__text {
+    max-width: 709px;
+    font-size: 22px;
+    line-height: 1.72;
+    margin-bottom: 40px;
+}
+
+.about__text span {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.about__right {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about__img-top,
+.about__img-bottom {
+    width: 327px;
+    height: 327px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.about__img-bottom {
+    margin-left: auto;
+}
+
+@media (max-width: $bp-sub-tablet) {
+
+    .about {
+        padding-bottom: 52px;
+    }
+
+    .about__wrapper {
+        display: block;
+    }
+
+    .about__star-1 {
+        display: none;
+    }
+
+    .about__star-2 {
+        display: none;
+    }
+
+    .about__star-3 {
+        display: none;
+    }
+
+    .about__star-4 {
+        display: block;
+        position: absolute;
+        bottom: -20px;
+        right: 20px;
+        animation-name: star;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    .about__right {
+        display: none;
+    }
+
+}
+
+@media (max-width: $bp-tablet) {
+
+    .about__title {
+        max-width: 264px;
+    }
+
+}
+
+@media (max-width: $bp-mobile) {
+
+    .about__title {
+        max-width: 264px;
+        margin-bottom: 24px;
+    }
+
+    .about__text {
+        max-width: 100%;
+        font-size: 18px;
+        line-height: 1.16;
+        margin-bottom: 16px;
+    }
+
+}
+
+@keyframes star {
+
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(360deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}

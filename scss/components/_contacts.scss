@@ -1,0 +1,106 @@
+.contacts {
+    padding-bottom: 96px;
+}
+
+.contacts__title {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.contacts__wrapper {
+    padding: 0 90px;
+    display: flex;
+    gap: 32px;
+}
+
+.contacts__map {
+    flex-shrink: 1;
+    border: none;
+    border-radius: 32px;
+}
+
+.contacts__form-group {
+    max-width: 423px;
+    background: var(--color-primary-dark);
+    background-image: url(../images/form-bg.png);
+    padding: 48px 56px;
+    border-radius: 32px;
+}
+
+.contacts__text {
+    color: var(--color-primary-light);
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.18;
+    margin-bottom: 24px;
+}
+
+.contacts__text span {
+    color: var(--color-brand);
+}
+
+.contacts__form-box {
+    margin-bottom: 16px;
+}
+
+.contacts__form-input {
+    width: 100%;
+    padding: 18px 32px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-primary-light);
+    font-size: 13px;
+    line-height: 1.15;
+    border-radius: 32px;
+    border: 2px solid var(--color-copy-text);
+    background: transparent;
+}
+
+.contacts__form-input:focus {
+    background: var(--color-copy-text);
+}
+
+.contacts__form-input::placeholder {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-primary-light);
+    font-size: 13px;
+    line-height: 1.15;
+}
+
+.contacts__form-input:focus::placeholder {
+    color: var(--color-primary-light);
+}
+
+.contacts__form-btn {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    background: var(--color-brand);
+    color: var(--color-primary-light);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.16;
+    font-weight: 600;
+    padding: 16px 32px;
+    border-radius: 32px;
+    border: 2px solid var(--color-brand);
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.contacts__form-btn:hover {
+    background: transparent;
+}
+
+.modal__form-policy {
+    text-align: center;
+    color: var(--color-copy-text);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.contacts__form-link {
+    text-decoration-line: underline;
+    text-underline-offset: 2px;
+}

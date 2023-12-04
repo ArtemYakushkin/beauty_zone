@@ -1,0 +1,83 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(1, 31, 74, 0.40);
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    max-width: 723px;
+    height: 100%;
+    max-height: 681px;
+    border-radius: 48px;
+    padding: 42px 144px;
+    background: var(--color-primary-dark);
+    background-image: url(../images/modal-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-y: auto;
+}
+
+.modal::-webkit-scrollbar {
+    width: 0;
+}
+
+.modal__btn-close {
+    position: absolute;
+    top: 42px;
+    right: 42px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border 0.3s, border-radius 0.3s;
+}
+
+.modal__btn-close:hover {
+    border: 2px solid var(--color-primary-light);
+    border-radius: 50%;
+}
+
+.modal__title {
+    font-family: 'Play', sans-serif;
+    color: var(--color-primary-light);
+    text-align: center;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 40px;
+}
+
+.modal__text {
+    color: var(--color-primary-light);
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.18;
+    margin-bottom: 32px;
+}
+
+.modal__text span {
+    color: var(--color-brand);
+}
+
+.modal__input {
+    margin-bottom: 24px;
+}

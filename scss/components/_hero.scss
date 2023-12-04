@@ -1,0 +1,120 @@
+.hero {
+    padding: 120px 0 126px 0;
+    background-image: url(../images/main-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero__wrapper {
+    padding-left: 106px;
+}
+
+.hero__subtitle {
+    font-size: 18px;
+    line-height: 1.16;
+    margin-bottom: 16px;
+}
+
+.hero__title {
+    max-width: 530px;
+    color: var(--color-brand);
+    font-family: 'Play', sans-serif;
+    font-size: 140px;
+    font-weight: 700;
+    line-height: 0.81;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+}
+
+.hero__btn {
+    background: var(--color-brand);
+    color: var(--color-primary-light);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.16;
+    padding: 16px 32px;
+    border-radius: 32px;
+    border: 2px solid var(--color-brand);
+    cursor: pointer;
+    margin-bottom: 14px;
+    transition: background 0.5s, color 0.5s;
+}
+
+.hero__btn:hover {
+    color: var(--color-primary-dark);
+    background: transparent;
+    border: 2px solid var(--color-brand);
+}
+
+.hero__text {
+    max-width: 238px;
+    text-align: center;
+    color: var(--color-hero-text);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+@media (max-width: $bp-desktop) {
+
+    .hero__wrapper {
+        padding-left: 56px;
+    }
+
+}
+
+@media (max-width: $bp-tablet) {
+
+    .hero {
+        padding: 93px 0 60px 0;
+        background-image: url(../images/mobile/main-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero__wrapper {
+        padding-left: 0;
+    }
+
+    .hero__subtitle {
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 0;
+    }
+
+    .hero__title {
+        max-width: 330px;
+        font-size: 54px;
+        line-height: 0.81;
+        margin: 0px auto 32px auto;
+    }
+
+    .hero__btn {
+        display: block;
+        font-size: 16px;
+        padding: 16px 24px;
+        border-radius: 24px;
+        margin: 0px auto 8px auto;
+    }
+
+    .hero__text {
+        margin: 0 auto;
+        max-width: 186px;
+        text-align: center;
+        font-size: 11px;
+        line-height: 1.63;
+    }
+
+}
+
+@media (max-width: $bp-mobile) {
+
+    .hero__title {
+        text-align: center;
+        max-width: 330px;
+        font-size: 48px;
+    }
+
+}

@@ -335,6 +335,7 @@ input {
 }
 .about {
   padding-bottom: 88px;
+  z-index: -1;
 }
 
 .about__wrapper {
@@ -693,13 +694,15 @@ input {
 }
 
 .contacts__map {
-  flex-shrink: 1;
+  width: 50%;
+  height: 481px;
   border: none;
   border-radius: 32px;
+  justify-content: center;
 }
 
 .contacts__form-group {
-  max-width: 423px;
+  width: 50%;
   background: var(--color-primary-dark);
   background-image: url(../images/form-bg.png);
   padding: 48px 56px;
@@ -805,6 +808,12 @@ input {
     gap: 24px;
     flex-direction: column-reverse;
     align-items: center;
+  }
+  .contacts__map {
+    width: 100%;
+  }
+  .contacts__form-group {
+    width: 100%;
   }
 }
 @media (max-width: 768px) {
